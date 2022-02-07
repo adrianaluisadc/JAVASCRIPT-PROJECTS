@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(226, 226, 226);
+}
+
+.score {
+  margin: 15px auto;
+  width: 436px;
+  height: 75px;
+  background-color: var(--mainColor);
+}
+
+.game {
+  margin: 15px auto;
+  width: 436px;
+  height: 565px;
+  background-image: url(/CarLaneGame/images/highway.png);
+  background-color: var(--mainColor);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 
+pixel add for movement
+56px,
+167px,
+278px;
++111 */
+
+/*game area*/
+.car-player {
+    top: 460px;
+    left: 56px;
+  width: 113px;
+  height: 100px;
+  position: absolute;
+  background-image: url(/CarLaneGame/images/car-player.png);
+background-position: top;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  
+}
