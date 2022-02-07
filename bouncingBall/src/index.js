@@ -79,11 +79,9 @@ function removethis() {
         document.body.append(hiScore);
     }
 
-
-
 }
 
-// console.log(storageScore); -- checking the stored score
+// console.log(storageScore); -- checking the storedscore
 ball.onclick = removethis;
 
 var one = setInterval(jumping, 91);
