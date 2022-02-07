@@ -1,6 +1,6 @@
 //IMPORTATIONS
 
-import { CAR_POSITION, KEY_DOWN } from "./constants.js";
+import { DISTANCE, KEY_DOWN, CAR_POSITION } from "./constants.js";
 
 // CREATING ELEMENTS
 
@@ -39,31 +39,31 @@ let carPosition = 56;
 
 function playerMovement(event) {
 
-    if (carPosition == 167) {
+    if (carPosition == CAR_POSITION.center) {
         switch (event.key) {
-            case KEY_DOWN.toRight:
-                carPosition = carPosition + CAR_POSITION;
+            case KEY_DOWN.toRight: //if key is pressed "d"
+                carPosition = carPosition + DISTANCE; //current position value will add the next distance
                 document.body.querySelector(".car-player").style.left = carPosition + "px";
                 console.log(carPosition);
                 break;
             case KEY_DOWN.toLeft:
-                carPosition = carPosition - CAR_POSITION;
+                carPosition = carPosition - DISTANCE;
                 document.body.querySelector(".car-player").style.left = carPosition + "px";
                 console.log(carPosition);
                 break;
         }
-    } else if (carPosition == 278) {
+    } else if (carPosition == CAR_POSITION.right) {
         switch (event.key) {
             case KEY_DOWN.toLeft:
-                carPosition = carPosition - CAR_POSITION;
+                carPosition = carPosition - DISTANCE;
                 document.body.querySelector(".car-player").style.left = carPosition + "px";
                 console.log(carPosition);
                 break;
         }
-    } else if (carPosition == 56) {
+    } else if (carPosition == CAR_POSITION.left) {
         switch (event.key) {
             case KEY_DOWN.toRight:
-                carPosition = carPosition + CAR_POSITION;
+                carPosition = carPosition + DISTANCE;
                 document.body.querySelector(".car-player").style.left = carPosition + "px";
                 console.log(carPosition);
                 break;
@@ -72,6 +72,6 @@ function playerMovement(event) {
 }
 
 //Invocation
-document.addEventListener('keydown', playerMovement);
 
+document.addEventListener('keydown', playerMovement);
 setInterval(highwayMovement, 120); // Invoking highwayMovement
