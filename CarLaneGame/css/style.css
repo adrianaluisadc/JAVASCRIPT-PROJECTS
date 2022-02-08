@@ -20,22 +20,32 @@ body {
 }
 
 /* 
-pixel add for movement
-56px,
-167px,
-278px;
-+111 */
+positions for movement
+56px = left
+167px = center
+278px = right
+111 = distance/
 
 /*game area*/
 .car-player {
-    top: 460px;
-    left: 56px;
+  top: 460px;
+  left: 56px;
   width: 113px;
   height: 100px;
   position: absolute;
   background-image: url(/CarLaneGame/images/car-player.png);
-background-position: top;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: 60px;
-  
+}
+
+
+.obstacle-car {
+  width: 113px;
+  bottom: 580px;
+  height: 100px;
+  position: absolute;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

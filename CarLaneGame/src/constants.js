@@ -13,5 +13,6 @@ const CAR_POSITION = {
     right: 278
 }
 
+
 //EXPORT THE CONSTANTS
 export { DISTANCE, KEY_DOWN, CAR_POSITION };
